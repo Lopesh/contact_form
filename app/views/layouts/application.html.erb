@@ -4,10 +4,25 @@
     <title>ContactForm</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <%= stylesheet_link_tag 'bootstrap', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'animate', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'hamburgers.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'animsition.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'select2.min.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'daterangepicker.css', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'jquery-3.2.1.min.js', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'popper.js', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'bootstrap.js', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'select2.min.js', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'moment.min.js', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'daterangepicker.js', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'countdowntime.js', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'main.js', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <%= yield %>

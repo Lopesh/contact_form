@@ -1,10 +1,14 @@
+
 <div class="container-contact100">
+
   <div class="wrap-contact100">
+
     <%= form_for @contact, method: "Post", html: { class: "contact100-form validate-form" } do |f| %>
-        <% if flash.present? %>
-          <% flash.each do |type, msg| %>
-              <% msg.each do |ms| %>
-                <div style="width: 100%;" class="alert full-width
+
+      <% if flash.present? %>
+        <% flash.each do |type, msg| %>
+          <% msg.each do |ms| %>
+            <div style="width: 100%;" class="alert full-width
                   <% if type == "success" %>
                      alert-success
                   <% elsif type == "notice" %>
@@ -13,46 +17,46 @@
                     alert alert-danger
                   <% end %>
                   ">
-                  <%= ms %>
-                </div>
-              <% end %>
+              <%= ms %>
+            </div>
           <% end %>
         <% end %>
+      <% end %>
         <span class="contact100-form-title">
-					Send Us A Message
+					<%= t 'contacts.title' %>
 				</span>
 
-      <label class="label-input100" for="first-name">Tell us your name *</label>
+      <label class="label-input100" for="first-name"><%= t 'contacts.form.name_label' %> *</label>
       <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-        <%= f.text_field :first_name, { id: "first-name", class: "input100", placeholder: "First name" } %>
+        <%= f.text_field :first_name, { id: "first-name", class: "input100", placeholder: "#{ t 'contacts.form.first_name_field_placeholder' }" } %>
         <span class="focus-input100"></span>
       </div>
       <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-        <%= f.text_field :last_name, { id: "last-name", class: "input100", placeholder: "Last name" } %>
+        <%= f.text_field :last_name, { id: "last-name", class: "input100", placeholder: "#{ t 'contacts.form.last_name_field_placeholder' }" } %>
         <span class="focus-input100"></span>
       </div>
 
-      <label class="label-input100" for="email">Enter your email *</label>
+      <label class="label-input100" for="email"><%= t 'contacts.form.email_label' %> *</label>
       <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-        <%= f.email_field :email, { id: "email", class: "input100", placeholder: "Eg. example@email.com" } %>
+        <%= f.email_field :email, { id: "email", class: "input100", placeholder: "#{ t 'contacts.form.email_field_placeholder'}" } %>
         <span class="focus-input100"></span>
       </div>
 
-      <label class="label-input100" for="phone">Enter phone number</label>
+      <label class="label-input100" for="phone"><%= t 'contacts.form.phone_label' %></label>
       <div class="wrap-input100">
-        <%= f.text_field :phone, { id: "phone", class: "input100", placeholder: "+1 800 000000" } %>
+        <%= f.text_field :phone, { id: "phone", class: "input100", placeholder: "#{ t 'contacts.form.phone_placeholder'}" } %>
         <span class="focus-input100"></span>
       </div>
 
-      <label class="label-input100" for="message">Message *</label>
+      <label class="label-input100" for="message"><%= t 'contacts.form.message_label' %> *</label>
       <div class="wrap-input100 validate-input" data-validate = "Message is required">
-        <%= f.text_area :message, { id: "message", class: "input100", placeholder: "Write us a message" , size: '50x10'} %>
+        <%= f.text_area :message, { id: "message", class: "input100", placeholder: "#{ t 'contacts.form.message_placeholder'}" , size: '50x10'} %>
         <span class="focus-input100"></span>
       </div>
 
       <div class="container-contact100-form-btn">
         <button class="contact100-form-btn">
-          Send Message
+          <%= t 'contacts.form.submit_button_text' %>
         </button>
       </div>
     <% end %>
@@ -64,7 +68,7 @@
 
         <div class="flex-col size2">
 						<span class="txt1 p-b-20">
-							Address
+							<%= t 'contacts.address' %>
 						</span>
 
           <span class="txt2">
@@ -80,7 +84,7 @@
 
         <div class="flex-col size2">
 						<span class="txt1 p-b-20">
-							Lets Talk
+							<%= t 'contacts.lets_talk' %>
 						</span>
 
           <span class="txt3">
@@ -96,13 +100,34 @@
 
         <div class="flex-col size2">
 						<span class="txt1 p-b-20">
-							General Support
+							<%= t 'contacts.general_support' %>
 						</span>
 
           <span class="txt3">
 							contact@example.com
 						</span>
         </div>
+
+      </div>
+
+      <div class="dis-flex size1 p-b-47">
+        <div class="txt1 p-r-25">
+          <span class="lnr lnr-envelope"></span>
+        </div>
+
+        <div class="flex-col size2">
+						<span class="txt1 p-b-20">
+							<%= t 'contacts.select_language' %>
+						</span>
+
+          <span class="txt3">
+							<%= link_to 'English', root_path(locale: :en) %>
+						</span>
+          <span class="txt3">
+							<%= link_to 'Russian', root_path(locale: :ru) %>
+						</span>
+        </div>
+
       </div>
     </div>
   </div>

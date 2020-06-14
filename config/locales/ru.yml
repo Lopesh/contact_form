@@ -1,0 +1,20 @@
+ru:
+  contacts:
+    title: 'Отправьте нам сообщение'
+    address: 'Адрес'
+    lets_talk: 'Давай поговорим'
+    general_support: 'Общая поддержка'
+    select_language: 'Выберите язык'
+    form:
+      name_label: 'Скажи нам свое имя'
+      first_name_field_placeholder: 'Имя'
+      last_name_field_placeholder: 'Фамилия'
+      email_label: 'Введите адрес электронной почты'
+      email_field_placeholder: 'Например. example@email.com'
+      phone_label: 'Введите номер телефона'
+      phone_placeholder: '+1 800 000000'
+      message_label: 'Сообщение'
+      message_placeholder: 'Напишите нам сообщение'
+      submit_button_text: 'Отправить сообщение'
+
+

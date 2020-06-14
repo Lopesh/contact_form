@@ -1,5 +1,5 @@
 class ContactMessageMailer < ApplicationMailer
-  default to: "durugkarlopesh@gmail.com"
+  default to: "info@ajackus.com"
 
   def contact_message_mail(contact)
     @contact = contact
