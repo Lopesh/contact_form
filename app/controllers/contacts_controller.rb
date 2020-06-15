@@ -8,8 +8,13 @@ class ContactsController < ApplicationController
     @contact = Contact.new(set_contact_params)
     respond_to do |format|
       if @contact.save
-        ContactMessageMailer.contact_message_mail(@contact).deliver
-        format.html { redirect_to '/', flash: { success: ['Message Send Successfully.'] }}
+        begin
+          ContactMessageMailer.contact_message_mail(@contact).deliver
+          format.html { redirect_to '/', flash: { success: ["Message Send Successfully"] }}
+        rescue
+          format.html { redirect_to '/', flash: { error: ["Configuration is missing"] }}
+        end
+
         format.json { render json: @contact, status: :created }
       else
         format.html { redirect_to '/', flash: { error: @contact.errors.full_messages }}
