@@ -38,16 +38,17 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   config.action_mailer.delivery_method = :smtp
-=begin
+
   config.action_mailer.smtp_settings = {
-      :address              => "",
-      :port                 => port_number,
-      :user_name            => user_name,
-      :password             => password,
-      :authentication       => "plain",
-      :enable_starttls_auto => true
+    :address              => "smtp.sendgrid.net",
+    :port                 => 587,
+    :user_name            => "apikey",
+    :password             => "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",
+    :authentication       => "plain",
+    :enable_starttls_auto => true
   }
-=end
+
+
   config.action_mailer.perform_deliveries = true
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

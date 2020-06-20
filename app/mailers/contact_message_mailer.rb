@@ -3,6 +3,7 @@ class ContactMessageMailer < ApplicationMailer
 
   def contact_message_mail(contact)
     @contact = contact
-    mail(from: contact.email, subject: "Queries")
+    mail(from: contact.email,
+       subject: "Queries")
   end
 end
