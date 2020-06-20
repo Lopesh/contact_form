@@ -39,14 +39,16 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
 
+=begin
   config.action_mailer.smtp_settings = {
-    :address              => "smtp.sendgrid.net",
+    :address              => "address",
     :port                 => 587,
-    :user_name            => "apikey",
-    :password             => "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",
+    :user_name            => "User Name",
+    :password             => "Password",
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
+=end
 
 
   config.action_mailer.perform_deliveries = true
